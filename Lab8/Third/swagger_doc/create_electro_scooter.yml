@@ -1,0 +1,31 @@
+swagger: '2.0'
+info:
+  title: 'Create Electro Scooter'
+  description: 'Creates a new Electro Scooter.'
+  version: '1.0'
+consumes:
+  - 'application/json'
+produces:
+  - 'application/json'
+parameters:
+  - in: 'body'
+    name: 'body'
+    required: true
+    schema:
+      id: ElectroScooter
+      required:
+        - name
+        - battery_level
+      properties:
+        name:
+          type: 'string'
+          description: 'Name of the Electro Scooter.'
+        battery_level:
+          type: 'number'
+          format: 'float'
+          description: 'Battery level of the Electro Scooter.'
+responses:
+  '201':
+    description: 'Electro Scooter created successfully.'
+  '400':
+    description: 'Invalid request data.'

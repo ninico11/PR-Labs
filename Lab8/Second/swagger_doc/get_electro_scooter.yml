@@ -1,0 +1,18 @@
+swagger: '2.0'
+info:
+  title: 'Get Electro Scooter by ID'
+  description: 'Retrieves an Electro Scooter by its ID.'
+  version: '1.0'
+produces:
+  - 'application/json'
+parameters:
+  - in: 'path'
+    name: 'scooter_id'
+    required: true
+    type: 'integer'
+    description: 'ID of the Electro Scooter.'
+responses:
+  '200':
+    description: 'Electro Scooter details retrieved successfully.'
+  '404':
+    description: 'Electro Scooter not found.'

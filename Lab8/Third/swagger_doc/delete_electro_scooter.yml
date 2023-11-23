@@ -1,0 +1,27 @@
+swagger: '2.0'
+info:
+  title: 'Delete Electro Scooter'
+  description: 'Deletes an existing Electro Scooter.'
+  version: '1.0'
+produces:
+  - 'application/json'
+parameters:
+  - in: 'path'
+    name: 'scooter_id'
+    required: true
+    type: 'integer'
+    description: 'ID of the Electro Scooter.'
+  - in: 'header'
+    name: 'X-Delete-Password'
+    required: true
+    type: 'string'
+    description: 'Password for deleting the Electro Scooter.'
+responses:
+  '200':
+    description: 'Electro Scooter deleted successfully.'
+  '401':
+    description: 'Incorrect password.'
+  '404':
+    description: 'Electro Scooter not found.'
+  '500':
+    description: 'Internal Server Error.'
